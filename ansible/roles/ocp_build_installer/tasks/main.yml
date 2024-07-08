@@ -73,7 +73,7 @@
         PATH: '/usr/local/go/bin:{{ temp_dir.path }}/go/bin:{{ ansible_env.PATH }}'
         DEFAULT_ARCH: '{{ architecture_alias }}'
         BUILD_VERSION: '{{ openshift_installer_version }}'
-      async: 600
+      async: {{ compilation_timeout }}
       poll: 10
 
     - name: remove existing openshift-install binary from /usr/local/bin

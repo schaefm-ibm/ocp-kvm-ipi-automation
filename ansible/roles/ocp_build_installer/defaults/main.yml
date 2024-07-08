@@ -1,3 +1,5 @@
 ---
 
 openshift_installer_version: release-4.10
+compilation_timeout: 600
+
